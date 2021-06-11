@@ -8,6 +8,7 @@ const APIKEY = 'a7c4b7f5c95840518586317834534553';
 let catagory = "";
  /* Api url */
 let APIURL = "";
+let PROXY = "https://cors-anywhere.herokuapp.com/";
  /* set Api title */
 let title = ""
 
@@ -27,7 +28,7 @@ menuicon.addEventListener('click', function(){
 // window onload event
 window.onload = (function(){
 	category = "business";
-	APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
+	APIURL = `${PROXY}https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
 	newsapi(APIURL);
 	
 	return APIURL;
@@ -44,7 +45,7 @@ Array.from(data_change).forEach(function(li){
 			ActiveTab.classList.remove("is-active")
 			li.classList.add("is-active")
 			category = e.target.innerText
-			APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`  
+			APIURL = `${PROXY}https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`  
 		}
 	    newsapi(APIURL)
 	    return APIURL;
