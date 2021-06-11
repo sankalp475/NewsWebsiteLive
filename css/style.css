@@ -1,0 +1,102 @@
+*{
+	font-family: fira code !important;
+}
+div.nav{
+    border-bottom: 2px solid #00d1b2;
+}
+
+.container{
+    
+	padding: 5px;
+}
+
+.nav-title{
+	/* background-color: rgb(245, 245 ,245) !important; */
+	padding: 3px 10px 3px 1px;
+	font-family: fira code;
+	font-weight: 500;
+}
+
+.search{
+	background-color: rgb(245, 245 ,245) !important;
+	border:2px solid transparent !important;
+	box-shadow: none !important;
+	width: 260px;
+	height: inherit;
+	border-right: transparent !important;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	color: #00d1b2;
+}
+.search:hover{
+	background-color: #ffff !important;
+	border: 2px solid	#cacacac1 !important;
+	box-shadow: none !important;
+	border-right: transparent !important;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.search:focus{
+	border-color: #00d1b2 !important;
+	background-color: #ffff !important;
+	border-right: transparent !important;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.iconSH{
+	color:#00d1b2;
+	position: relative;
+	left: -9px;
+	background-color: rgb(245, 245 ,245) !important;
+	padding: 11px 19px 10px 1px;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border: 2px solid transparent;
+	border-left-width: 0px !important;
+}
+.search:hover ~ .iconSH{
+	background-color: #ffff !important;
+	border: 2px solid #cacacac1 !important;
+	border-left-color: #FFF !important;
+	border-left-width: 0px !important;
+}
+.search:focus ~ .iconSH{
+	border-color: #00d1b2 !important;
+	background-color: #ffff !important;
+	/* border-right: transparent !important; */
+}
+.iconSH:focus{
+	border-color: #00d1b2 !important;
+	background-color: #ffff !important;
+	/* border-right: transparent !important; */
+}
+.res{
+	font-weight: 900;
+}
+.fa-search:before {
+  content: "\f002"; 
+   font-family: 'Font Awesome 5 Free'
+}
+/* .color{
+	color: #00d1b2 !important;
+} */
+li.is-active > a{
+    color: #00d1b2 !important;
+	border-bottom: 2px solid;
+	border-color: #00d1b2 !important ;
+    cursor: default;
+    pointer-events: none
+}
+.fa-reply:before {
+    content: "\f3e5";
+	font-family: 'Font Awesome 5 Free'
+}
+.navbar-item:hover{
+	color: #00d1b2 !important;
+	transition: .3s linear;
+	-webkit-transition: .3s linear;
+	-moz-transition: .3s linear;
+	-ms-transition: .3s linear;
+	-o-transition: .3s linear;
+}

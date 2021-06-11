@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>NEWS WEBSITE</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+	<!-- <link rel="stylesheet" href="../../font/fontawesome-free-5.15.3-web/css/all.css" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="css/style.css" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/53e108ba9f.css"> -->
+</head>
+
+<body>
+	<div class="nav">
+		<div class="container">
+			<nav class="navbar" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+					<div class="navbar-item is-size-5 is-light">
+						<h1 class="nav-title">NEWS DALY</h1>
+					</div>
+
+					<a role="button" class="navbar-burger" id="menu" aria-label="menu" aria-expanded="false"
+						data-target="navbarBasicExample">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</a>
+				</div>
+				<div id="navbarBasicExample" class="navbar-menu">
+					<div class="navbar-start">
+						<a class="navbar-item"> Home </a>
+						<a class="navbar-item"> github </a>
+					</div>
+
+					<div class="navbar-end">
+						<div class="navbar-item">
+							<input class="input is-rounded search" id="search" type="text" aria-label="search input  "
+								placeholder="search.. " />
+							<i class="fas fa-search iconSH"></i>
+							<!-- <i class="fal fa-balance-scale-right"></i> -->
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<div class="result my-5" id="view">
+			<div class="search_result is-flex">
+				<!-- <h1 class="res is-size-1 mx-2">Result</h1>
+                <h1 class="res is-size-1 mx-2"> Result</h1> -->
+			</div>
+			<div class="tabs is-centered">
+				<ul id="data-change">
+					<li class="tablinks is-active"><a>business</a></li>
+					<li class="tablinks"><a>entertainment</a></li>
+					<li class="tablinks"><a>health</a></li>
+					<li class="tablinks"><a>science</a></li>
+					<li class="tablinks"><a>sports</a></li>
+					<li class="tablinks"><a>technology</a></li>
+				</ul>
+			</div>
+			<div id="tabs_data" >
+			</div>
+			
+		</div>
+	</div>
+	<!-- <script src="https://use.fontawesome.com/53e108ba9f.js"></script> -->
+	<script src="js/index.js"></script>
+</body>
+
+</html>
