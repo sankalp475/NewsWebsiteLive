@@ -1,14 +1,19 @@
-// const APIURL 
+/**
+ *  project from {{ https://www.youtube.com/watch?v=w9bVm7VLqTI }}
+ */
+//api requirment 
+ /* Api KEY */
 const APIKEY = 'a7c4b7f5c95840518586317834534553';
+ /* Api catagory */
 let catagory = "";
+ /* Api url */
 let APIURL = "";
-
+ /* set Api title */
 let title = ""
-// let newsapi = ""
-// console.log(APIKEY)
 
 const menuicon = document.getElementById('menu');
 let menuitem = document.querySelector('.navbar-menu');
+// click function
 menuicon.addEventListener('click', function(){
 	if(menuitem.style.display == 'none'){
 	    menuitem.style.display = 'block';
@@ -18,6 +23,8 @@ menuicon.addEventListener('click', function(){
 		// menuitem.style.transition = ".3s linear"
 	}
 })
+
+// window onload event
 window.onload = (function(){
 	category = "business";
 	APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
@@ -27,7 +34,7 @@ window.onload = (function(){
 })()
 
 
-
+// tabs for news
 const data_change = document.querySelector('#data-change').children;
 Array.from(data_change).forEach(function(li){
 	li.addEventListener('click', function(e){
@@ -44,7 +51,7 @@ Array.from(data_change).forEach(function(li){
 	})
 })
 
-
+// xhr data send function
 let tabs_data = document.getElementById('tabs_data');
 function newsapi(URL){
 	const xhr = new XMLHttpRequest();
@@ -117,7 +124,5 @@ function newsapi(URL){
 	// send the request
 	xhr.send();
 }
-
-// let newcearch 
 
 
