@@ -58,6 +58,11 @@ function newsapi(URL){
 
 	// Open the object
 	xhr.open('GET', URL, true);
+    
+	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
+    xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
 
 	// What to do when response is ready
 	xhr.onload = function () {
@@ -114,7 +119,7 @@ function newsapi(URL){
                 `;
 				newshtml += news_card;
 				
-				return title;
+				// return title;
 			})
 			tabs_data.innerHTML = newshtml; 
 		} else {
