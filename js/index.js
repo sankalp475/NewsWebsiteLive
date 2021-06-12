@@ -60,11 +60,10 @@ function newsapi(URL){
 	// Open the object
 	xhr.open('GET', URL, true);
     
-	//xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-     //   xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
-     //  xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-       // xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-
+	xhr.setRequestHeader("Access-Control-Allow-Origin", 'https://sankalp475.github.io/NewsWebsiteLive/')
+        xhr.setRequestHeader("Access-Control-Allow-Credentials", true)
+        xhr.setRequestHeader("Access-Control-Allow-Methods" ,"GET")
+        xhr.setRequestHeader("Access-Control-Allow-Headers", "Content-Type, application/json")
 	// What to do when response is ready
 	xhr.onload = function () {
 		if(this.status == 200){
