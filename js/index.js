@@ -28,7 +28,7 @@ menuicon.addEventListener('click', function(){
 // window onload event
 window.onload = (function(){
 	category = "business";
-	APIURL = `${PROXY}https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
+	APIURL = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
 	newsapi(APIURL);
 	
 	return APIURL;
@@ -60,10 +60,10 @@ function newsapi(URL){
 	// Open the object
 	xhr.open('GET', URL, true);
     
-	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-    xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
-    xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+	//xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+     //   xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
+     //  xhr.setRequestHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+       // xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
 
 	// What to do when response is ready
 	xhr.onload = function () {
