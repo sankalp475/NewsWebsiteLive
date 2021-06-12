@@ -28,7 +28,7 @@ menuicon.addEventListener('click', function(){
 // window onload event
 window.onload = (function(){
 	category = "business";
-	APIURL = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
+	APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
 	newsapi(APIURL);
 	
 	return APIURL;
