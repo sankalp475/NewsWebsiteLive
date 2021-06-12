@@ -45,7 +45,7 @@ Array.from(data_change).forEach(function(li){
 			ActiveTab.classList.remove("is-active")
 			li.classList.add("is-active")
 			category = e.target.innerText
-			APIURL = `${PROXY}https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`  
+			APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`  
 		}
 	    newsapi(APIURL)
 	    return APIURL;
