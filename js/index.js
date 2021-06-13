@@ -4,11 +4,11 @@
 //api requirment 
  /* Api KEY */
 const APIKEY = 'a7c4b7f5c95840518586317834534553';
+const PROXYURL = 'https://cors-anywhere.herokuapp.com/'
  /* Api catagory */
 let catagory = "";
  /* Api url */
 let APIURL = "";
-let PROXY = "https://cors-anywhere.herokuapp.com/";
  /* set Api title */
 let title = ""
 
@@ -28,7 +28,7 @@ menuicon.addEventListener('click', function(){
 // window onload event
 window.onload = (function(){
 	category = "business";
-	APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
+	APIURL = `${PROXYURL}https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`
 	newsapi(APIURL);
 	
 	return APIURL;
@@ -45,7 +45,7 @@ Array.from(data_change).forEach(function(li){
 			ActiveTab.classList.remove("is-active")
 			li.classList.add("is-active")
 			category = e.target.innerText
-			APIURL = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`  
+			APIURL = `${PROXYURL}https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${APIKEY}`  
 		}
 	    newsapi(APIURL)
 	    return APIURL;
@@ -59,11 +59,6 @@ function newsapi(URL){
 
 	// Open the object
 	xhr.open('GET', URL, true);
-    
-	xhr.setRequestHeader("Access-Control-Allow-Origin", 'https://sankalp475.github.io/NewsWebsiteLive/')
-        xhr.setRequestHeader("Access-Control-Allow-Credentials", true)
-        xhr.setRequestHeader("Access-Control-Allow-Methods" ,"GET")
-        xhr.setRequestHeader("Access-Control-Allow-Headers", "Content-Type, application/json")
 	// What to do when response is ready
 	xhr.onload = function () {
 		if(this.status == 200){
@@ -72,13 +67,9 @@ function newsapi(URL){
 			// console.log(articles)
 			let newshtml = "";
 			articles.forEach(function(element){
-                // let search = document.getElementById('search');
+                
 				title = element.title
-				// search.addEventListener('input', function(element){
-            	// 	let val = search.value.toLowerCase()
-            	// 	console.log(element)
-            	// })
-				// console.log(title)
+		
 				if(element.description == null){
 					element.description = element.title
 				}
