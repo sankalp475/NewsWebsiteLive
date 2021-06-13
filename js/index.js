@@ -3,7 +3,7 @@
  */
 //api requirment 
  /* Api KEY */
-const APIKEY = 'a7c4b7f5c95840518586317834534553';
+const APIKEY = '<YOUR APIKEY/>';
 const PROXYURL = 'https://cors-anywhere.herokuapp.com/'
  /* Api catagory */
 let catagory = "";
